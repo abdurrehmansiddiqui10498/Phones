@@ -9,7 +9,7 @@ if a == "on":
     ac = int(input("Enter your phone pin:"))
     while ac == 7098:
       print("phone is starting and ready to go")
-      print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock")
+      print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")
       contacts = {}
       while True:
        ad = int(input("Enter your choice:"))
@@ -37,7 +37,7 @@ if a == "on":
            else:
             print(f"Contact {name} not found")
           elif choice == 4:
-            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser")
+            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")
             break
             
           else:
@@ -62,7 +62,7 @@ if a == "on":
            else:
             print("Invalid operator inserted")
           elif aba == 2:
-            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock")
+            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")
             break
        elif ad == 3:
         print("Shutting down")
@@ -143,7 +143,7 @@ if a == "on":
 
          print("Thank you for visiting the Bakery Shop!")
          print("Choose any of the following options")
-         print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock")    
+         print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")    
        elif ad == 5:
          while True:
           print("1. enter browser\n2. Exit")
@@ -164,7 +164,7 @@ if a == "on":
               print("These are your latest posts")
               print("Food and Nutrition\nBalanced diet\nPython coding")
           elif aa == 2:
-            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock")
+            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Games")
             break
        elif ad == 6:
            while True:
@@ -177,10 +177,45 @@ if a == "on":
              print("Current date:", date_and_time.strftime("%x"))
              print("Current time:",time.strftime("%H:%M:%S"))
             elif af == 2:
-              print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock")
+              print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")
               break
             else:
               print("You have entered invalid input")
+       elif ad == 7:
+         while True:
+          print("1. Enter Game\n2. Exit")
+          asa = int(input("Enter your choice:"))
+          if asa == 1:
+            import random
+
+
+
+            number = random.randint(1, 100)
+            attempts = 11
+            guess = 0
+            print("Welcome to the Python's Official Number gusessing")
+            print("Rules:")
+            print("1. Guess any number from 1 to 10.")
+            print("2. You have only 10 attempts\nso the attempt counter will run and display each time you enter a wrong number")
+            print("Have fun")
+            if attempts >= 1:
+             while guess != number:
+              guess = int(input("enter your guess:"))
+              attempts -= 1
+              if guess > number:
+               print("The number is High!!!")
+              elif guess < number:
+               print("The number is low!!!")
+              else:
+               print("Congratulations!!!")
+            else:
+              print("You have lost!\nTry again")
+          elif asa == 2:
+            print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")
+            break
+            
+           
+
 elif a == "off":
  print("off")
 else:
