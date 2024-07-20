@@ -183,7 +183,7 @@ if a == "on":
               print("You have entered invalid input")
        elif ad == 7:
          while True:
-          print("1. Enter Game\n2. Exit")
+          print("1. Enter Game\n2. Exit\n3. Counter")
           asa = int(input("Enter your choice:"))
           if asa == 1:
             import random
@@ -213,6 +213,16 @@ if a == "on":
           elif asa == 2:
             print("1. Contacts\n2. Calculator\n3. Shut down\n4. Cake Delivery app\n5. Browser\n6. Clock\n7. Game")
             break
+          elif asa == 3:
+            import time
+            a = int(input("Enter the number from which the counter will start:"))
+            while a > 0:
+              print(a)
+              time.sleep(1)
+              a = a  - 1
+            else:
+              print(f"Counter is at {a}")
+
             
            
 
